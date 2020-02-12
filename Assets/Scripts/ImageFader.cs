@@ -7,9 +7,11 @@ public class ImageFader : MonoBehaviour
 {
     public SpriteRenderer spriteRenderer;
 
+    public float Delay = 0;
+
     public void ImageRecognized()
     {
-        spriteRenderer.DOFade(1, 0.5f);
+        spriteRenderer.DOFade(1, 0.5f).SetDelay(Delay);
     }
 
     public void ImageRecogStopped()
